@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="IdeaPickerApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IdeaPickerApp.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Add Ideas" >
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:IdeaPickerPage}"
+                Route="IdeaPickerPage" />
+        </Tab>
+        <Tab Title="List Ideas" >
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:IdeaListPage}"
+                Route="IdealListPage" />
+        </Tab>
+    </TabBar>
+
+</Shell>
