@@ -9,7 +9,7 @@ public class Repository
     public Repository () 
     {
         var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "ideas.db"); //creating path to folder where data files are stored / database path
+            "ideas.db"); //creating database path to where data files are stored
 
         _database = new SQLiteConnection(dbPath); //create connection to database
         _database.CreateTable<Idea>(); //create table
