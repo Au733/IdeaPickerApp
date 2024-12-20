@@ -4,6 +4,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerApp.Views.IdeaListPage">
     <ContentPage.Content>
+        <StackLayout>
         <ListView x:Name="listIdeas" VerticalOptions="Fill" />
+        
+        <Button Text="Random Pick" Margin="0,70,0,0" Clicked="RandomPick_OnClicked"/>
+        
+        <Label x:Name="lblRandomIdea" VerticalOptions="Fill" HorizontalTextAlignment="Center" Margin="0,40" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

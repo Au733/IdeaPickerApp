@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaPickerApp.Models;
 
 namespace IdeaPickerApp.Views;
 
 public partial class IdeaListPage : ContentPage
 {
+    
     public IdeaListPage()
     {
         InitializeComponent();
         Title = "Ideas List";
+        
     }
     
     protected override void OnAppearing()
@@ -23,5 +26,15 @@ public partial class IdeaListPage : ContentPage
 
         listIdeas.ItemTemplate = ideaTemplate; // use the ideaTemplate for showing how each item in ListView will be displayed
         listIdeas.ItemsSource = App.IdeaList.GetIdeas(); // bind ListView to ideas stored in repository and able those store ideas to be displayed
+    }
+
+    private void RandomPick_OnClicked(object sender, EventArgs e)
+    {
+        var random = new Random();
+        var randomIndex = random.Next(App.IdeaList.GetIdeas().Count);
+        var randomIdea = App.IdeaList.GetIdeas()[randomIndex];
+
+        lblRandomIdea.Text = randomIdea.Suggestion;
+        
     }
 }
