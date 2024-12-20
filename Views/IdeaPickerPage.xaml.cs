@@ -23,7 +23,7 @@ public partial class IdeaPickerPage : ContentPage
         
         App.IdeaList.SaveIdea(newIdea); // adding new idea data to repository
 
-        txtIdea.Text = string.Empty;
+        txtIdea.Text = string.Empty; 
         
     }
     

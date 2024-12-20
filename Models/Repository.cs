@@ -18,7 +18,7 @@ public class Repository
     public List<Idea> GetIdeas() //method to get idea list
     {
         return _database.Table<Idea>().ToList();
-        //return _database.Query<Idea>("Select * from Idea where ID > 2"); //Querying database for specific data
+        
     }
 
     public void SaveIdea(Idea idea) //method to insert idea into database table

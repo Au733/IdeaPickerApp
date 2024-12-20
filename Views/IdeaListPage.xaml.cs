@@ -30,11 +30,11 @@ public partial class IdeaListPage : ContentPage
 
     private void RandomPick_OnClicked(object sender, EventArgs e)
     {
-        var random = new Random();
-        var randomIndex = random.Next(App.IdeaList.GetIdeas().Count);
-        var randomIdea = App.IdeaList.GetIdeas()[randomIndex];
+        var random = new Random(); //create new instance of Random used to generate random numbers
+        var randomIndex = random.Next(App.IdeaList.GetIdeas().Count);//generate random index used to pick random idea from list in database
+        var randomIdea = App.IdeaList.GetIdeas()[randomIndex];//get the random idea from database
 
-        lblRandomIdea.Text = randomIdea.Suggestion;
+        lblRandomIdea.Text = randomIdea.Suggestion;//assigns the idea from database to the label
         
     }
 }
